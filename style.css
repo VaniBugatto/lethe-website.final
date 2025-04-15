@@ -53,7 +53,7 @@ button {
 .stTextInput>label,
 .stNumberInput>label,
 .stSelectbox>label,
-.stDateInput>label {
+.stdate_input>label {
     color: var(--label-text) !important;
     font-weight: 600;
     font-size: 1.1rem;
