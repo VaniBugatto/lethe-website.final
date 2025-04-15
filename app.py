@@ -313,5 +313,5 @@ with side_col:
             <h2>Clinic Details</h2>
     """, unsafe_allow_html=True)
 
-    st.selectbox("Department", ["Neurophysiology", "Sleep Medicine", "Pulmonology"])
+
     st.date_input("Study Date")
