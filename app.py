@@ -6,8 +6,8 @@ import base64
 from datetime import datetime
 import time
 
-#api_url = 'http://127.0.0.1:8000/predict'
-api_url = 'http://proyecto-lethe-1029998951756.europe-west1.run.app'
+api_url = 'http://127.0.0.1:8000/predict'
+#api_url = 'http://proyecto-lethe-1029998951756.europe-west1.run.app'
 
 # Configuración de página
 st.set_page_config(
@@ -151,7 +151,7 @@ def generate_medical_report(patient_info, diagnosis_data):
     pdf.ln(10)
     pdf.set_font("Arial", 'B', 14)
     pdf.set_text_color(10, 15, 40)
-    pdf.cell(0, 10, f"Primary Diagnosis: {diagnosis_data['name']}", ln=1, align='C', center=True)
+    pdf.cell(0, 10, f"Primary Diagnosis: {diagnosis_data['name']}", ln=1, align='C')
     pdf.set_font("Arial", size=12)
     pdf.set_text_color(0, 0, 0)
     pdf.multi_cell(0, 8, diagnosis_data["description"], align='C')
@@ -161,7 +161,7 @@ def generate_medical_report(patient_info, diagnosis_data):
     pdf.ln(10)
     pdf.set_font("Arial", 'B', 14)
     pdf.set_text_color(10, 15, 40)
-    pdf.cell(0, 10, "Key Metrics", align='C', center=True, ln=2)
+    pdf.cell(0, 10, "Key Metrics", align='C', ln=2)
     pdf.set_font("Arial", size=12)
     pdf.set_text_color(0,0,0)
     for param, value in diagnosis_data["key_parameters"].items():
@@ -190,7 +190,7 @@ def generate_medical_report(patient_info, diagnosis_data):
     pdf.cell(0, 10, "Secured by Proyecto Lethe, supported by Le Wagon", ln=1)
 
 
-    return bytes(pdf.output(dest='S'))  #.encode('latin1')
+    return bytes(pdf.output(dest='S'),encoding='latin1')  #.encode('latin1')
 
 # Interfaz de usuario
 
@@ -282,7 +282,8 @@ if st.button("Initiate Analysis"):
                     {"name": patient_name, "age": patient_age},
                     diagnosis
                 )
-                b64 = base64.b64encode(pdf_report).decode()
+                #b64 = base64.b64encode(pdf_report).decode()
+                b64 = base64.b64encode(pdf_report).decode('utf-8')
                 st.download_button(
                     label="Download Full Report (PDF)",
                     data=pdf_report,
