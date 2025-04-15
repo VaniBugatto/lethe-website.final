@@ -185,3 +185,7 @@ button {
 .stDownloadButton button {
   color: black !important; /* Asegúrate de que el texto dentro del botón sea negro */
 }
+button[title="Download Full Report (PDF)"],
+button:has-text("Download Full Report (PDF)") {
+  color: black !important;
+}
