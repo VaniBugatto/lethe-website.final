@@ -20,8 +20,6 @@ st.set_page_config(
 # CSS estilo CyberPunk
 with open('style.css') as f:
     css = f.read()
-with open('config.toml') as f:
-    config = f.read()
 
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 st.markdown("""
