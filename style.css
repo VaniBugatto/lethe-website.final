@@ -72,6 +72,21 @@ button {
     padding: 12px 20px !important;
     border: 1px solid rgba(0,255,196,0.2) !important;
 }
+div[data-baseweb="select"] {
+  color: var(--input-text) !important;
+}
+
+/* Texto dentro del dropdown */
+div[data-baseweb="select"] * {
+  color: var(--input-text) !important;
+  background-color: var(--secondary) !important;
+}
+
+/* Evitar que esté todo deshabilitado y blanco */
+div[data-baseweb="select"] div[aria-disabled="true"] {
+  color: var(--input-text) !important;
+  opacity: 1 !important;
+}
 
 /* Contenedor principal */
 .main {
@@ -169,5 +184,11 @@ button {
 
 
 .stDownloadButton > div {
-  background-color: transparent !important;
+  background-color: white !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
 }
