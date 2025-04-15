@@ -181,3 +181,7 @@ button {
 .stDownloadButton > div * {
   color: black !important;
 }
+
+.stDownloadButton button {
+  color: black !important; /* Asegúrate de que el texto dentro del botón sea negro */
+}
