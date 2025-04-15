@@ -117,6 +117,7 @@ button {
     .stButton>button:hover {
         transform: scale(1.05);
         box-shadow: 0 0 20px rgba(0,255,196,0.3) !important;
+        color: var(--accent) !important;
     }
 
     .stTextInput>div>div>input,
