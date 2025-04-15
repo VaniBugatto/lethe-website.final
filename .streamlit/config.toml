@@ -1,0 +1,9 @@
+toml
+[theme]
+primaryColor = "#0d143a"
+backgroundColor = "#070A1A"
+secondaryBackgroundColor = "#1A2146"
+textColor = "#FFFFFF"
+input-text = "#000000";
+label-text="#00FFC4";
+font = "sans-serif"
