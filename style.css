@@ -17,16 +17,12 @@ body, .stApp {
 }
 
 /* Inputs */
-input, select {
-  background-color: var(--secondary) !important;
+input, select, textarea, .stTextInput > div > input, .stDateInput input, .stNumberInput input {
+  background-color: var(--input-bg) !important;
   color: var(--input-text) !important;
-  border: 1px solid var(--accent);
-}
-
-textarea {
-  background-color: var(--secondary) !important;
-  color: var(--input-text) !important;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--accent) !important;
+  border-radius: 6px;
+  padding: 0.5rem;
 }
 
 /* Labels */
@@ -34,11 +30,19 @@ label, .css-1cpxqw2 {
   color: var(--label-text) !important;
 }
 
+.css-1v0mbdj {
+  background-color: var(--input-bg) !important;
+  color: var(--input-text) !important;
+}
+
 /* Botones */
 button {
   background-color: var(--primary) !important;
   color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 6px;
 }
+
 
 * {
     font-family: 'Space Grotesk', sans-serif;
