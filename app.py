@@ -294,12 +294,15 @@ if st.button("Initiate Analysis"):
                 )
                 #b64 = base64.b64encode(pdf_report).decode()
                 b64 = base64.b64encode(pdf_report).decode('utf-8')
+
+                st.markdown('<div class="custom-download">', unsafe_allow_html=True)
                 st.download_button(
-                    label="Download Full Report (PDF)",
-                    data=pdf_report,
-                    file_name="sleep_diagnosis_report.pdf",
-                    mime="application/octet-stream"
-                )
+                label="Download Full Report (PDF)",
+                data=pdf_report,
+                file_name="sleep_diagnosis_report.pdf",
+                mime="application/octet-stream"
+                    )
+                st.markdown('</div>', unsafe_allow_html=True)
 
             except Exception as e:
                 st.error(f"Error during analysis: {str(e)}")

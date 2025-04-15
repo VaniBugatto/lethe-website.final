@@ -181,11 +181,15 @@ button {
 .stDownloadButton > div * {
   color: black !important;
 }
+button[title="Download Full Report (PDF)"],
+button:has-text("Download Full Report (PDF)") {
+  color: black !important;
+}
 
 .stDownloadButton button {
   color: black !important; /* Asegúrate de que el texto dentro del botón sea negro */
 }
-button[title="Download Full Report (PDF)"],
-button:has-text("Download Full Report (PDF)") {
+.custom-download button {
   color: black !important;
+  background-color: white !important;
 }
