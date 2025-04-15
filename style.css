@@ -157,19 +157,8 @@ button {
     font-weight: bold !important;
     }
     /* Estilo específico para el botón de descarga de PDF */
-.stDownloadButton button {
-  color: #000000 !important;
-  background-color: #FFFFFF !important;
-  border: 1px solid #000000 !important;
-}
 
-.stDownloadButton button:hover {
-  color: #000000 !important;
-  background-color: #F0F0F0 !important;
-}
-
-
-.stDownloadButton > div {
+.stdownload_button > div {
   background-color: white !important;
   color: black !important;
   border: 1px solid var(--accent) !important;
@@ -178,18 +167,8 @@ button {
   text-align: center;
   font-weight: bold;
 }
-.stDownloadButton > div * {
-  color: black !important;
-}
+.stdownload_button
 button[title="Download Full Report (PDF)"],
-button:has-text("Download Full Report (PDF)") {
-  color: black !important;
-}
-
-.stDownloadButton button {
-  color: black !important; /* Asegúrate de que el texto dentro del botón sea negro */
-}
-.custom-download button {
-  color: black !important;
-  background-color: white !important;
+button:has-text("Download Full Report (PDF)")
+{  color: black !important;
 }
