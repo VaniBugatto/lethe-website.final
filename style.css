@@ -179,5 +179,5 @@ button {
   font-weight: bold;
 }
 .stDownloadButton > div * {
-  color: var(--accent) !important;
+  color: black !important;
 }
