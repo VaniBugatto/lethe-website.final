@@ -73,38 +73,6 @@ button {
     border: 1px solid rgba(0,255,196,0.2) !important;
 }
 
-/* Días del calendario */
-div[role="gridcell"] {
-  color: var(--input-text) !important;
-  background-color: transparent !important;
-}
-
-/* Días al pasar el mouse */
-div[role="gridcell"]:hover {
-  background-color: rgba(0, 255, 196, 0.1) !important;
-  cursor: pointer;
-}
-
-/* Día seleccionado */
-div[aria-selected="true"] {
-  background-color: var(--accent) !important;
-  color: white !important;
-  border-radius: 50% !important;
-}
-
-/* Encabezados de días (lun, mar, etc.) */
-div[role="columnheader"] {
-  color: var(--label-text) !important;
-  font-weight: bold;
-}
-
-/* Panel del calendario */
-.css-1dbjc4n {
-  background-color: rgba(255,255,255,0.95) !important;
-  border-radius: 12px;
-  padding: 1rem;
-}
-
 
 /* Contenedor principal */
 .main {
