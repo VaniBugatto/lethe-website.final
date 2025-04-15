@@ -6,8 +6,8 @@ import base64
 from datetime import datetime
 import time
 
-api_url = 'http://127.0.0.1:8000/predict'
-#api_url = 'http://proyecto-lethe-1029998951756.europe-west1.run.app'
+#api_url = 'http://127.0.0.1:8000/predict'
+api_url = 'http://proyecto-lethe-1029998951756.europe-west1.run.app/predict'
 
 # Configuración de página
 st.set_page_config(
@@ -225,9 +225,19 @@ if st.button("Initiate Analysis"):
                 data = df.to_dict(orient='records')
 
                 # Llamar a la API
-                response = requests.post(api_url, json={'data': data})
-                diagnosis_code = response.json()['diagnosis']
-                diagnosis = DIAGNOSIS_INFO.get(diagnosis_code, DIAGNOSIS_INFO["0"])
+                #response = requests.post(api_url, json={'data': data})
+                with st.spinner("Procesando archivo y esperando predicciones..."):
+                    response = requests.post('https://proyecto-lethe-1029998951756.europe-west1.run.app/predict', json={'data': data})
+                if response.status_code==200:
+                    st.success("¡Predicciones listas!")
+                    print(response.status_code)
+                    print(response)
+                    diagnosis_code = response.json()['diagnosis']
+                    diagnosis = DIAGNOSIS_INFO.get(diagnosis_code, DIAGNOSIS_INFO["0"])
+
+                else:
+                    st.error(f"Ocurrió un error: {response.status_code}")
+
 
                 st.success("Analysis Complete")
 
