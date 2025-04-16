@@ -7,7 +7,7 @@ from datetime import datetime
 import time
 
 #api_url = 'http://127.0.0.1:8000/predict'
-api_url = 'https://proyecto-lethe-1029998951756.europe-west1.run.app'
+api_url = 'https://proyecto-lethe-1029998951756.europe-west1.run.app/predict'
 
 # Configuración de página
 st.set_page_config(
