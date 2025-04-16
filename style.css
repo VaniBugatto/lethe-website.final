@@ -65,6 +65,9 @@ button {
 .stTextInput>div>div>input,
 .stNumberInput>div>div>input,
 .stSelectbox>div>div>div,
+  div[data-baseweb="calendar"] [role="gridcell"] > div > button {
+  color: black !important;
+}
 .stdate_input>div>div>input {
     color: var(--input-text) !important;
     background: rgba(255,255,255,0.1) !important;
