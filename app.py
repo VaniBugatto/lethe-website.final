@@ -227,7 +227,7 @@ if st.button("Initiate Analysis"):
                 # Llamar a la API
                 #response = requests.post(api_url, json={'data': data})
                 with st.spinner("Procesando archivo y esperando predicciones..."):
-                    response = requests.post(api_url, json={'data': data})
+                    response = requests.post('http://proyecto-lethe-1029998951756.europe-west1.run.app/predict', json={'data': data})
                 if response.status_code==200:
                     st.success("¡Predicciones listas!")
                     print(response.status_code)
