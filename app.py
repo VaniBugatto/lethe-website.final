@@ -318,13 +318,13 @@ with side_col:
 
     st.markdown("""
     <style>
-    /* Colorea los días en negro */
-    div[data-baseweb="calendar"] button {
+    /* Solo aplica a los días del calendario */
+    div[data-baseweb="calendar"] [role="grid"] [role="gridcell"] button {
         color: black !important;
     }
 
-    /* Opcional: cambia el color del día seleccionado */
-    div[data-baseweb="calendar"] button[aria-selected="true"] {
+    /* Día seleccionado - opcional */
+    div[data-baseweb="calendar"] [role="gridcell"] button[aria-selected="true"] {
         background-color: #f04e4e !important;
         color: white !important;
     }
