@@ -319,23 +319,27 @@ with side_col:
     st.date_input("Study Date")
     st.markdown("""
     <style>
-    div[class^="stDateInput"] > div {
-    background-color: #111111;
-    color: white;
-    border-radius: 5px;
-    padding: 4px;
-    border: 1px solid #444;
-}
+        /* Cambiar el color de fondo del calendario */
+        .stDateInput .stDateInput input {
+            background-color: #f0f0f0;  /* Cambia el fondo a gris claro */
+            color: #333333;  /* Cambia el color del texto */
+        }
 
-/* Color del texto del input */
-div[class^="stDateInput"] input {
-    color: white;
-}
+        /* Cambiar el color de los números en el calendario */
+        .stDateInput .calendar .day {
+            color: #2b2b2b;  /* Cambiar el color de los números */
+        }
 
-/* Ajuste de hover/focus */
-div[class^="stDateInput"]:hover,
-div[class^="stDateInput"]:focus-within {
-    border: 1px solid #888;
-}
-</style>
+        /* Cambiar el color de los días seleccionados */
+        .stDateInput .calendar .selected {
+            background-color: #007bff;  /* Color de fondo cuando seleccionas una fecha */
+            color: white;  /* Color de texto cuando está seleccionado */
+        }
+
+        /* Cambiar el color de los días del mes actual */
+        .stDateInput .calendar .today {
+            border: 2px solid #007bff;  /* Añadir borde a la fecha de hoy */
+            font-weight: bold;  /* Resaltar la fecha de hoy */
+        }
+    </style>
 """, unsafe_allow_html=True)
