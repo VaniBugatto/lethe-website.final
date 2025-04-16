@@ -227,7 +227,7 @@ if st.button("Initiate Analysis"):
                 # Llamar a la API
                 #response = requests.post(api_url, json={'data': data})
                 with st.spinner("Procesando archivo y esperando predicciones..."):
-                    response = requests.post('https://proyecto-lethe-1029998951756.europe-west1.run.app/predict', json={'data': data})
+                    response = requests.post(api_url, json={'data': data})
                 if response.status_code==200:
                     st.success("¡Predicciones listas!")
                     print(response.status_code)
@@ -316,5 +316,18 @@ with side_col:
             <h2>Clinic Details</h2>
     """, unsafe_allow_html=True)
 
+    st.markdown("""
+    <style>
+    /* Colorea los días en negro */
+    div[data-baseweb="calendar"] button {
+        color: black !important;
+    }
 
+    /* Opcional: cambia el color del día seleccionado */
+    div[data-baseweb="calendar"] button[aria-selected="true"] {
+        background-color: #f04e4e !important;
+        color: white !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
     st.date_input("Study Date")
