@@ -319,14 +319,5 @@ with side_col:
     st.date_input("Study Date")
     st.markdown("""
     <style>
-    [data-baseweb="calendar"] [role="gridcell"] button {
-    color: black !important;
-    }
-
-    [data-baseweb="calendar"] [role="gridcell"] button[aria-selected="true"] {
-    background-color: var(--accent) !important;
-    color: white !important;
-    }
-
      </style>
     """, unsafe_allow_html=True)
