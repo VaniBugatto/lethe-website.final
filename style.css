@@ -73,9 +73,6 @@ button {
     border: 1px solid rgba(0,255,196,0.2) !important;
 }
 
-
-
-
 /* Contenedor principal */
 .main {
     background: linear-gradient(45deg, var(--primary), var(--bg)) !important;
