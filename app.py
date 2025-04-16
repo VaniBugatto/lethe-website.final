@@ -322,7 +322,9 @@ with side_col:
     div[data-baseweb="calendar"] [role="grid"] [role="gridcell"] button {
         color: black !important;
     }
-
+    div[data-baseweb="calendar"] [role="gridcell"] > div > button {
+        color: black !important;
+    }
     /* Día seleccionado - opcional */
     div[data-baseweb="calendar"] [role="gridcell"] button[aria-selected="true"] {
         background-color: #f04e4e !important;
