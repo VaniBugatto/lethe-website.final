@@ -103,11 +103,7 @@ button {
     .glow-text {
         text-shadow: 0 0 10px rgba(0,255,196,0.4);
     }
-    .calendar-day,
-    .react-datepicker__day,
-    .day-cell {
-    color: black !important; /* El !important asegura que sobrescriba otros estilos */
-    }
+
     .stButton>button {
         background: linear-gradient(45deg, var(--accent), #00B894) !important;
         color: var(--primary) !important;
