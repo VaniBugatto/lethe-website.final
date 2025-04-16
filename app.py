@@ -229,7 +229,6 @@ if st.button("Initiate Analysis"):
                 with st.spinner("Procesando archivo y esperando predicciones..."):
                     response = requests.post(api_url, json={'data': data})
                 if response.status_code==200:
-                    st.success("¡Predicciones listas!")
                     print(response.status_code)
                     print(response)
                     diagnosis_code = response.json()['diagnosis']
