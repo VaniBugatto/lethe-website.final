@@ -319,18 +319,23 @@ with side_col:
     st.date_input("Study Date")
     st.markdown("""
     <style>
-    /* Cambiar fondo del date_input */
-    div[class^="stDateInput"] {
-        background-color: #111111;
-        color: white;
-        border-radius: 8px;
-        padding: 5px;
-    }
+    div[class^="stDateInput"] > div {
+    background-color: #111111;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+    border: 1px solid #444;
+}
 
-    /* Cambiar fondo del popup del calendario (puede necesitar ajuste) */
-    .css-1d391kg {
-        background-color: #222222 !important;
-        color: white !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
+/* Color del texto del input */
+div[class^="stDateInput"] input {
+    color: white;
+}
+
+/* Ajuste de hover/focus */
+div[class^="stDateInput"]:hover,
+div[class^="stDateInput"]:focus-within {
+    border: 1px solid #888;
+}
+</style>
+""", unsafe_allow_html=True)
