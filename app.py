@@ -317,3 +317,20 @@ with side_col:
     """, unsafe_allow_html=True)
 
     st.date_input("Study Date")
+    st.markdown("""
+    <style>
+    /* Cambiar fondo del date_input */
+    div[class^="stDateInput"] {
+        background-color: #111111;
+        color: white;
+        border-radius: 8px;
+        padding: 5px;
+    }
+
+    /* Cambiar fondo del popup del calendario (puede necesitar ajuste) */
+    .css-1d391kg {
+        background-color: #222222 !important;
+        color: white !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
