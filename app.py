@@ -317,7 +317,3 @@ with side_col:
     """, unsafe_allow_html=True)
 
     st.date_input("Study Date")
-    st.markdown("""
-    <style>
-     </style>
-    """, unsafe_allow_html=True)
