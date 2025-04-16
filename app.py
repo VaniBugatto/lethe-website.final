@@ -316,18 +316,17 @@ with side_col:
             <h2>Clinic Details</h2>
     """, unsafe_allow_html=True)
 
+    st.date_input("Study Date")
     st.markdown("""
     <style>
-    /* Solo aplica a los días del calendario */
-    div[data-baseweb="calendar"] [role="grid"] [role="gridcell"] button {
-        color: black !important;
+    [data-baseweb="calendar"] [role="gridcell"] button {
+    color: black !important;
     }
 
-    /* Día seleccionado - opcional */
-    div[data-baseweb="calendar"] [role="gridcell"] button[aria-selected="true"] {
-        background-color: #f04e4e !important;
-        color: white !important;
+    [data-baseweb="calendar"] [role="gridcell"] button[aria-selected="true"] {
+    background-color: var(--accent) !important;
+    color: white !important;
     }
-    </style>
-""", unsafe_allow_html=True)
-    st.date_input("Study Date")
+
+     </style>
+    """, unsafe_allow_html=True)
